@@ -6,3 +6,7 @@
 .DS_Store
 /build
 /captures
+
+libs/
+src/main/java/
+src/main/res/drawable/
