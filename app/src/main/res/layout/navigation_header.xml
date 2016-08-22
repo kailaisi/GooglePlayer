@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
     android:gravity="center_vertical"
-    android:padding="16dp"
-    android:background="@mipmap/">
+    android:padding="16dp">
     <com.wx.ovalimageview.RoundImageView
         android:id="@+id/iv_user_icon"
         android:layout_width="100dp"
