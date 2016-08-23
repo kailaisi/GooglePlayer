@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +21,7 @@ import cn.com.tcsl.googleplayer.R;
 public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View, NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mIdDrawerLayout;
     private AppBarLayout mAblMain;
-    private TableLayout mTlMain;
+    private TabLayout mTlMain;
     private ViewPager mVpMain;
     private NavigationView mNvMainNavigation;
     private Toolbar mToolbar;
@@ -30,7 +31,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("MainActivity", Build.VERSION.RELEASE);
         initView();
         initValue();
     }
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     private void initView() {
         mIdDrawerLayout = (DrawerLayout) findViewById(R.id.id_drawer_layout);
         mAblMain = (AppBarLayout) findViewById(R.id.abl_main);
-        mTlMain = (TableLayout) findViewById(R.id.tl_main);
+        mTlMain = (TabLayout) findViewById(R.id.tl_main);
         mVpMain = (ViewPager) findViewById(R.id.vp_main);
         mNvMainNavigation = (NavigationView) findViewById(R.id.nv_main_navigation);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -52,6 +52,7 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
      */
     private void initToolbar() {
         setSupportActionBar(mToolbar);
+        mTlMain.setupWithViewPager(mVpMain);
     }
 
     private void initValue() {

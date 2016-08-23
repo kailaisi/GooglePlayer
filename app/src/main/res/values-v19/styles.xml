@@ -1,6 +1,6 @@
 <resources>
     <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:windowTranslucentStatus">true</item><!--状态栏-->
-        <item name="android:windowTranslucentNavigation">true</item><!--导航栏-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>导航栏-->
     </style>
 </resources>
