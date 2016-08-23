@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools"
     android:gravity="center_vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
     <com.wx.ovalimageview.RoundImageView
         android:id="@+id/iv_user_icon"
         android:layout_width="100dp"
@@ -26,7 +27,7 @@
             android:id="@+id/tv_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tool:text="Elliy"
+            android:text="Elliy"
             android:textColor="#000"
             android:textSize="20sp"
             android:layout_marginBottom="10dp"/>
@@ -35,7 +36,7 @@
             android:id="@+id/tv_user_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tool:text="251887028@qq.com"
+            android:text="251887028@qq.com"
             android:textSize="18sp"/>
     </LinearLayout>
 </LinearLayout>

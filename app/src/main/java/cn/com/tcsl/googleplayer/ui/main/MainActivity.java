@@ -2,6 +2,7 @@ package cn.com.tcsl.googleplayer.ui.main;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
@@ -9,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TableLayout;
 
@@ -28,6 +30,7 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("MainActivity", Build.VERSION.RELEASE);
         initView();
         initValue();
     }
@@ -41,7 +44,16 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
         mVpMain = (ViewPager) findViewById(R.id.vp_main);
         mNvMainNavigation = (NavigationView) findViewById(R.id.nv_main_navigation);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        initToolbar();
     }
+
+    /**
+     * 初始化toolbar
+     */
+    private void initToolbar() {
+        setSupportActionBar(mToolbar);
+    }
+
     private void initValue() {
         initNavigation();
     }
