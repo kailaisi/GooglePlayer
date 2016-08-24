@@ -65,7 +65,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
         Resources resources = getBaseContext().getResources();
         ColorStateList colorStateList = resources.getColorStateList(R.color.navigation_menu_item_color);
         nvMainNavigation.setItemTextColor(colorStateList);
-        nvMainNavigation.setItemIconTintList(null);
         nvMainNavigation.setNavigationItemSelectedListener(this);
         nvMainNavigation.getMenu().getItem(0).setChecked(true);
     }

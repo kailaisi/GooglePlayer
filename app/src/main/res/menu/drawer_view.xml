@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group>
+    <group android:id="@+id/group_home">
         <item
             android:id="@+id/ic_home"
             android:checkable="true"
             android:icon="@mipmap/ic_home"
             android:title="@string/tv_home" />
     </group>
-    <group>
+    <group android:id="@+id/group_setting">
         <item
             android:id="@+id/ic_setting"
             android:checkable="true"
             android:icon="@mipmap/ic_setting"
             android:title="@string/tv_setting" />
     </group>
-    <group>
+    <group android:id="@+id/group_scans">
         <item
             android:id="@+id/ic_scan"
             android:checkable="true"
             android:icon="@mipmap/ic_scans"
             android:title="@string/tv_scans" />
     </group>
-    <group>
+    <group android:id="@+id/group_feedback">
         <item
             android:id="@+id/ic_feedback"
             android:checkable="true"
             android:icon="@mipmap/ic_feedback"
             android:title="@string/tv_feedback" />
     </group>
-    <group>
+    <group android:id="@+id/group_updates">
         <item
             android:id="@+id/ic_updates"
             android:checkable="true"
             android:icon="@mipmap/ic_updates"
             android:title="@string/tv_updates" />
     </group>
-    <group>
+    <group android:id="@+id/group_exit">
         <item
             android:id="@+id/ic_exit"
             android:checkable="true"
