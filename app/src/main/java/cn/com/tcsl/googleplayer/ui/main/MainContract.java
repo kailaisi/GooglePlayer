@@ -18,8 +18,11 @@ public interface MainContract {
          * 初始化导航栏
          */
         void initNavigation();
-        void showNavigation();
-        void hideNavigation();
+
+        /**
+         * 关闭APP
+         */
+        void closeApp();
     }
 
     interface Presenter extends BasePresenter{

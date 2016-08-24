@@ -20,6 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.com.tcsl.googleplayer.Base.BaseActivity;
 import cn.com.tcsl.googleplayer.R;
+import cn.com.tcsl.googleplayer.utils.AppManager;
 
 public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View, NavigationView.OnNavigationItemSelectedListener, SearchView.OnQueryTextListener {
     @BindView(R.id.toolbar)
@@ -70,6 +71,11 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     }
 
     @Override
+    public void closeApp() {
+        AppManager.getInstance().finishAll();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_view, menu);
         if (Build.VERSION.SDK_INT > 11) {
@@ -83,15 +89,6 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void showNavigation() {
-    }
-
-    @Override
-    public void hideNavigation() {
-
     }
 
     @Override
