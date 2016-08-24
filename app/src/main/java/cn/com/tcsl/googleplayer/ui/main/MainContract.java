@@ -9,6 +9,15 @@ import cn.com.tcsl.googleplayer.Base.BaseView;
  */
 public interface MainContract {
     interface View extends BaseView{
+        /**
+         * 初始化toolbar
+         */
+        void initToolbar();
+
+        /**
+         * 初始化导航栏
+         */
+        void initNavigation();
         void showNavigation();
         void hideNavigation();
     }

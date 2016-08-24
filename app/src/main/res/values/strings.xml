@@ -8,4 +8,7 @@
     <string name="tv_updates">检查更新</string>
     <string name="tv_about">关于</string>
     <string name="tv_exit">退出</string>
+    <string name="open_drawer">侧边栏打开</string>
+    <string name="close_drawer">侧边栏关闭</string>
+    <string name="action_search">搜索</string>
 </resources>
